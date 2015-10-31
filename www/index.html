@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Frock Advisor</title>
+      
+    <!-- Include Bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Include my CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" >
+      
+  </head>
+  <body>
+    
+    <!-- header --> 
+    <header ng-include="'app/components/core/header/headerView.html'"></header>    
+    
+    <!-- Main Content & Injected Views -->
+    <main ng-controller="pageController">
+        <div ng-view></div>
+    </main> 
+    
+    <!-- Footer -->  
+    <footer ng-include="'app/components/core/footer/footerView.html'"></footer>
+    
+    
+    <!-- Include Bootstrap Javascript & Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      
+    <!-- Include Angular--> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+
+    <!-- Encription-->
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
+    
+    <!-- Include Angular Controller -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/components/home/homeController.js"></script>
+    <script src="app/components/login/loginController.js"></script>
+
+  </body>
+</html>

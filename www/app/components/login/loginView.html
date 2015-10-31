@@ -1,0 +1,23 @@
+<div class="row nopadding" ng-controller="loginController">
+  <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 nopadding" ng-repeat="feed in feeds">
+    <div class="thumbnail">
+      <div class="panel-heading" style="background-image: url(http://frockadvisor-api-storage.s3.amazonaws.com/fotocon/{{feed.fotocon_hash}}.jpg);">
+           <ul class="nav nav-pills buttons" role="tablist">
+            <li role="presentation">
+              <button ng-if="feed.loves_count>0" href="#" class="btn btn-danger btn-transparent"><span class="glyphicon glyphicon-heart"></span></button>
+              <button ng-if="feed.loves_count==0" href="#" class="btn btn-default btn-transparent"><span class="glyphicon glyphicon-heart"></span></button>
+              <span ng-if="feed.loves_count>0" class="badge badge-transparent">{{feed.loves_count}}</span>
+             </li>
+            <li role="presentation">
+              <button ng-if="feed.wants_count>0" href="#" class="btn btn-info btn-transparent"><span class="glyphicon glyphicon-star"></span> </button>
+              <button ng-if="feed.wants_count==0" href="#" class="btn btn-default btn-transparent"><span class="glyphicon glyphicon-star"></span> </button>
+              <span ng-if="feed.wants_count>0" class="badge badge-transparent">{{feed.wants_count}}</span>
+             </li>
+          </ul>      
+      </div>
+      <div class="my-margin">
+        <h4>{{feed.username}}</h4>
+      </div>
+    </div>
+  </div>
+</div>

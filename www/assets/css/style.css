@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body { 
+    padding-top: 60px;
+    font-family: 'Open Sans', sans-serif;
+}
+.panel-heading {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+}
+.buttons {
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+.badge-transparent {
+    position:absolute;
+    bottom:0;
+    right:0;
+    background-color: transparent;
+    opacity:0.8;
+    filter:Alpha(opacity=0.8);
+}
+.nopadding {
+   padding: 0px !important;
+   margin: 0px !important;
+}
+.btn-transparent{
+  opacity:0.8;
+  filter:Alpha(opacity=0.8);
+}
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+}
